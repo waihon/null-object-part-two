@@ -25,10 +25,8 @@ class User
   def plan_name
     if free_trial?
       FREE_TRIAL
-    elsif subscription
-      subscription.plan_name
     else
-      NO_PLAN
+      subscription.plan_name
     end
   end
 
