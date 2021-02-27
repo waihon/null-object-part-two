@@ -1,6 +1,7 @@
 class User
   include ActiveModel::Model
-  attr_accessor :created_at, :credit_card, :subscription
+  attr_accessor :created_at, :credit_card
+  attr_writer :subscription
 
   FREE_TRIAL = 'Free Trial'
   NO_PLAN = 'No Plan'
@@ -37,5 +38,9 @@ class User
 
   def free_trial?
     created_at >= 30.days.ago
+  end
+
+  def subscription
+    @subscription || NoSubscription.new
   end
 end
