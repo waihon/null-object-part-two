@@ -15,11 +15,7 @@ class User
   end
 
   def price
-    if free_trial?
-      0
-    else
-      subscription.price
-    end
+    subscription.price
   end
 
   def plan_name
