@@ -11,7 +11,7 @@ class User
   end
 
   def has_mentoring?
-    free_trial? || subscription.has_mentoring?
+    subscription.has_mentoring?
   end
 
   def price
