@@ -7,9 +7,7 @@ class User
   NO_PLAN = 'No Plan'
 
   def charge
-    unless subscription.nil?
-      subscription.charge(credit_card)
-    end
+    subscription.charge(credit_card)
   end
 
   def has_mentoring?
