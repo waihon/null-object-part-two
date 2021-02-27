@@ -1,4 +1,4 @@
-class FreeTrial
+class TrialSubscription
   def charge(credit_card)
   end
 

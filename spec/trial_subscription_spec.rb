@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe FreeTrial do
+describe TrialSubscription do
   describe "#charge" do
     it "does not charge the credit card" do
-      subscription = FreeTrial.new
+      subscription = TrialSubscription.new
       credit_card = double("credit_card")
       allow(credit_card).to receive(:charge)
 
@@ -15,7 +15,7 @@ describe FreeTrial do
 
   describe '#has_mentoring?' do
     it 'returns true' do
-      subscription = FreeTrial.new
+      subscription = TrialSubscription.new
 
       expect(subscription.has_mentoring?).to be_truthy
     end
@@ -23,7 +23,7 @@ describe FreeTrial do
 
   describe "#price" do
     it "returns zero" do
-      subscription = FreeTrial.new
+      subscription = TrialSubscription.new
 
       expect(subscription.price).to be_zero
     end 
@@ -31,7 +31,7 @@ describe FreeTrial do
 
   describe "#plan_name" do
     it "return Free Trial" do
-      subscription = FreeTrial.new
+      subscription = TrialSubscription.new
 
       expect(subscription.plan_name).to eq(User::FREE_TRIAL)
     end
