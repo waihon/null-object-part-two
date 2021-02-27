@@ -28,4 +28,12 @@ describe NoSubscription do
       expect(subscription.price).to eq(0)
     end 
   end
+
+  describe "#plan_name" do
+    it "is blank" do
+      subscription = NoSubscription.new
+
+      expect(subscription.plan_name).to be_blank
+    end
+  end
 end

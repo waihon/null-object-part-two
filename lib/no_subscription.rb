@@ -9,4 +9,8 @@ class NoSubscription
   def price
     0
   end
+
+  def plan_name
+    ""
+  end
 end
