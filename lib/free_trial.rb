@@ -5,4 +5,8 @@ class FreeTrial
   def has_mentoring?
     true
   end
+
+  def price
+    0
+  end
 end

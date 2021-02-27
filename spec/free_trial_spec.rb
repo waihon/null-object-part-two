@@ -20,4 +20,12 @@ describe FreeTrial do
       expect(subscription.has_mentoring?).to be_truthy
     end
   end
+
+  describe "#price" do
+    it "returns zero" do
+      subscription = FreeTrial.new
+
+      expect(subscription.price).to be_zero
+    end 
+  end
 end
