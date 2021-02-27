@@ -12,4 +12,12 @@ describe FreeTrial do
       expect(credit_card).not_to have_received(:charge)
     end
   end
+
+  describe '#has_mentoring?' do
+    it 'returns true' do
+      subscription = FreeTrial.new
+
+      expect(subscription.has_mentoring?).to be_truthy
+    end
+  end
 end
