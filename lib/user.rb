@@ -15,7 +15,7 @@ class User
   end
 
   def price
-    if free_trial? || subscription.nil?
+    if free_trial?
       0
     else
       subscription.price
