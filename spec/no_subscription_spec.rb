@@ -30,10 +30,10 @@ describe NoSubscription do
   end
 
   describe "#plan_name" do
-    it "is blank" do
+    it "return No Plan" do
       subscription = NoSubscription.new
 
-      expect(subscription.plan_name).to be_blank
+      expect(subscription.plan_name).to eq(User::NO_PLAN)
     end
   end
 end

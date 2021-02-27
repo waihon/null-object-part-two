@@ -11,6 +11,6 @@ class NoSubscription
   end
 
   def plan_name
-    ""
+    User::NO_PLAN
   end
 end
