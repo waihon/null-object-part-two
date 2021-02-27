@@ -5,7 +5,7 @@ describe NoSubscription do
     it "does not charge the credit card" do
       subscription = NoSubscription.new
       credit_card = double("credit_card")
-      credit_card.stub("charge")
+      allow(credit_card).to receive(:charge)
 
       subscription.charge(credit_card)
 
