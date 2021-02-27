@@ -20,4 +20,12 @@ describe NoSubscription do
       expect(subscription.has_mentoring?).to be false
     end
   end
+
+  describe "#price" do
+    it "is zero" do
+      subscription = NoSubscription.new
+
+      expect(subscription.price).to eq(0)
+    end 
+  end
 end
