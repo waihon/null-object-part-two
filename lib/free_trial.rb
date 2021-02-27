@@ -9,4 +9,8 @@ class FreeTrial
   def price
     0
   end
+
+  def plan_name
+    User::FREE_TRIAL
+  end
 end

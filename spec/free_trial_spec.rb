@@ -28,4 +28,12 @@ describe FreeTrial do
       expect(subscription.price).to be_zero
     end 
   end
+
+  describe "#plan_name" do
+    it "return Free Trial" do
+      subscription = FreeTrial.new
+
+      expect(subscription.plan_name).to eq(User::FREE_TRIAL)
+    end
+  end
 end
