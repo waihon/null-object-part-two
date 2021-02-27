@@ -37,6 +37,10 @@ class User
   end
 
   def subscription
-    @subscription || NoSubscription.new
+    if free_trial?
+      TrialSubscription.new
+    else
+      @subscription || NoSubscription.new
+    end
   end
 end
