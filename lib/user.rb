@@ -19,11 +19,7 @@ class User
   end
 
   def plan_name
-    if free_trial?
-      FREE_TRIAL
-    else
-      subscription.plan_name
-    end
+    subscription.plan_name
   end
 
   private
